@@ -5,6 +5,7 @@ RUN apt-get install -y \
     build-essential \
     curl \
     htop \
+    iputils-ping \
     locales \
     net-tools \
     openssh-client \
