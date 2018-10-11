@@ -6,7 +6,8 @@ RUN apt-get install -y \
     net-tools \
     openssh-client \
     openssh-server \
-    sshpass
+    sshpass \
+    sudo
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN mkdir /var/run/sshd
 RUN echo 'root:password' | chpasswd
