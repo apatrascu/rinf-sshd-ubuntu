@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 
+ENV LC_ALL "en_US.UTF-8"
 RUN apt-get update
 RUN apt-get install -y \
     build-essential \
