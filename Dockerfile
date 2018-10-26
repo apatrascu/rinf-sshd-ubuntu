@@ -31,7 +31,7 @@ RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 EXPOSE 22
 
-RUN wget -q https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py /systemctl.py
+RUN wget -q https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py -O /systemctl.py
 RUN chmod +x /systemctl.py
 RUN cp -f /systemctl.py /bin/systemctl
 RUN cp -f /systemctl.py /usr/bin/systemctl
